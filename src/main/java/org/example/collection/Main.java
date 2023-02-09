@@ -1,4 +1,4 @@
-package org.example.collrction;
+package org.example.collection;
 
 import java.util.*;
 import java.util.stream.Collectors;
