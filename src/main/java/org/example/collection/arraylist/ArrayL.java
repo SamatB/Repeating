@@ -1,21 +1,38 @@
 package org.example.collection.arraylist;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class ArrayL {
     public static void main(String[] args) {
 
 //        solarSystem();
         System.out.println("======================================");
-        sorT();
-        reversE();
+//        sorT();
+//        reversE();
 //        swap();
 //        disJoint();
+        arrayListToArray();
     }
 
+    public static void arrayListToArray() {
+        String mercury = ("Меркурий");
+        String venus = ("Венера");
+        String earth = ("Земля");
+        String mars = ("Марс");
+        String jupiter = ("Юпитер");
+        String saturn = ("Сатурн");
+        String uranus = ("Уран");
+        String neptune = ("Нептун");
+
+        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(mercury, venus, earth, mars, jupiter, saturn, uranus, neptune));
+        String[] array = new String[arrayList.size()];
+        arrayList.toArray(array);
+        for (String a: array){
+            System.out.println(a);
+        }
+    }
     public static void lottery() {
         ArrayList<Integer> lottery = new ArrayList<>(100);
         for (int i = 0; i <= 100; i++) {
@@ -91,6 +108,20 @@ public class ArrayL {
                 mars, jupiter, saturn, uranus, neptune));
         Collections.sort(solar);
         System.out.println(solar);
+
+//        System.out.println("===============================");
+//
+//        Iterator itr = solar.iterator();
+//        while (itr.hasNext()) {
+//            System.out.print(itr.next() + " ");
+//        }
+//        System.out.println("===============================");
+//
+//        ListIterator iterator = solar.listIterator();
+//        while (iterator.hasNext()) {
+//            System.out.print(iterator.next() + ", ");
+
+        solar.forEach(s -> System.out.println(s));
     }
 
     public static void reversE() {
@@ -108,5 +139,9 @@ public class ArrayL {
         Collections.sort(solar);
         Collections.reverse(solar);
         System.out.println(solar);
+//        solar.clear();
+        solar.removeAll(solar);
+        System.out.println(solar);
+
     }
 }
