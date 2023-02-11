@@ -1,4 +1,4 @@
-package org.example.collection.arraylist;
+package org.example.collection.list.arraylist;
 
 import java.util.*;
 import java.util.function.Consumer;
