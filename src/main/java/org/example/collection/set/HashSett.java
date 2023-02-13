@@ -7,8 +7,8 @@ import java.util.Set;
 
 public class HashSett {
     public static void main(String[] args) {
-        ints();
-
+//        ints();
+        union();
     }
 
     public static void country() {
@@ -41,5 +41,33 @@ public class HashSett {
             numSet.add(random.nextInt(10));
             System.out.println(numSet);
         }
+    }
+
+    public static void union() {
+        HashSet<Integer> set = new HashSet<>();
+        set.add(2);
+        set.add(3);
+        set.add(1);
+        set.add(5);
+        set.add(4);
+
+        HashSet<Integer> set2 = new HashSet<>();
+        set.add(2);
+        set.add(7);
+        set.add(1);
+        set.add(5);
+        set.add(8);
+
+//        HashSet<Integer> union = new HashSet<>(set);
+//        union.addAll(set2);
+//        System.out.println("Union: " + union);
+//
+//        HashSet<Integer> intersect = new HashSet<>(set);
+//        intersect.retainAll(set2);
+//        System.out.println("intersect: " + intersect);
+
+        HashSet<Integer> subtract = new HashSet<>(set);
+        subtract.removeAll(set2);
+        System.out.println("Remove all: " + subtract);
     }
 }
