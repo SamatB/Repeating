@@ -2,6 +2,7 @@ package org.example.lambda.functionalinterface;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringJoiner;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -44,5 +45,10 @@ public class Main {
         Function<String, Integer> valueConverter = Integer::valueOf;
         System.out.println(valueConverter.apply("678"));
 
+        StringJoiner joiner = new StringJoiner("/", "-", "+");
+        for (String s: "Hello the brave world".split("")){
+            joiner.add(s);
+        }
+        System.out.println(joiner);
     }
 }

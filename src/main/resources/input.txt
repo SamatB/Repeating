@@ -1,0 +1,4 @@
+Из коллекции:
+Stream<String> fromCollection = Arrays.asList("x", "y", "z").stream();
+Из набора значений:
+Stream<String> fromValues = Stream.of("x", "y", "z");
